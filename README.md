@@ -1,185 +1,112 @@
-Author: SU Meiling (23037224R)
+To convert the content of the `Assignment1_report_SUMeiling.docx` file into a GitHub README file, you will need to follow these steps:
 
-This repository contains the implementation and results of GNSS signal processing from acquisition to positioning using various techniques, including Weighted Least Squares (WLS) and Kalman Filtering.
+1. **Extract Text and Figures**: First, you need to extract the text content and images from the `.docx` file.
+2. **Convert to Markdown**: Transform the extracted text and figures into Markdown format.
+3. **Save as README.md**: Save the converted content into a `README.md` file.
 
-Table of Contents
+Since I cannot extract the content from the provided `.docx` file directly, I will provide a template and instructions on how to perform these steps manually.
 
-Task 1: Acquisition
+### Step-by-Step Instructions
 
-Task 2: Tracking
+#### 1. Extract Text and Figures from `.docx`
+- Open the `.docx` file using Microsoft Word or any compatible word processor.
+- Copy all the text content and save the images separately.
 
-Task 3: Navigation Data Decoding
+#### 2. Convert Text to Markdown
+- Use a Markdown editor or an online converter to format the text.
+- For headings, use `#` for main headings, `##` for sub-headings, and so on.
+- For lists, use `-` or `*` for bullet points.
+- For code blocks, use triple backticks (\`\`\`) before and after the code.
 
-Task 4: Position and Velocity Estimation
+#### 3. Include Images in Markdown
+- Place the images in a directory within your repository, for example, `images`.
+- In your Markdown file, reference the images using the following syntax:
+  ```markdown
+  ![Alt text](images/image1.png)
+  ```
 
-Task 5: Kalman Filter-Based Positioning
+#### 4. Save as `README.md`
+- Save the file with the `.md` extension.
 
-Results and Analysis
+### Example Template
 
-Conclusion
+```markdown
+# Assignment 1 Report
 
-Task 1: Acquisition
+## Introduction
+*Include an introduction to the report here.*
 
-The first step in GNSS signal processing is acquisition, where Intermediate Frequency (IF) data is processed using a GNSS Software-Defined Radio (SDR). The acquisition process aims to detect satellite signals and estimate their coarse Doppler shift and code phase.
+## Objectives
+*Describe the objectives of the assignment.*
 
-Task 2: Tracking
+## Methodology
+*Outline the methodology used in the assignment.*
 
-Tracking is performed using Delay-Locked Loop (DLL) and correlator-based signal processing. The impact of urban interference, such as multipath and signal blockage, is analyzed through C/N₀ and DLL discriminator outputs.
+## Results
+*Present the results of the assignment.*
 
-Tracking Results
+### Figure 1
+![Figure 1](images/figure1.png)
 
-Carrier-to-Noise Ratio (C/N₀) and DLL Tracking Plots
+### Figure 2
+![Figure 2](images/figure2.png)
 
- 
+## Discussion
+*Discuss the results and findings.*
 
- 
+## Conclusion
+*Summarize the conclusion of the assignment.*
 
-... (Include figures for all satellites)
+## References
+*List any references used in the report.*
+```
 
-Analysis of Tracking Performance
+### Example README.md
 
-Satellite
+Here is an example of a `README.md` file based on the provided report structure:
 
-C/N₀ Performance
+```markdown
+# Assignment 1 Report
 
-Observations
+## Introduction
+This report presents the findings and analysis of Assignment 1 for AAE6102. The report includes various methodologies and results obtained from the assignment.
 
-3
+## Objectives
+1. Objective 1
+2. Objective 2
+3. Objective 3
 
-30-40 dB-Hz
+## Methodology
+The methodology involves several steps, including data collection, analysis, and interpretation of results.
 
-Fluctuating, weak signals
+## Results
+The results section presents the data and findings obtained from the analysis.
 
-16
+### Figure 1
+![Figure 1](images/figure1.png)
 
-32-48 dB-Hz
+### Figure 2
+![Figure 2](images/figure2.png)
 
-Strong and stable
+## Discussion
+The discussion section provides an in-depth analysis of the results, highlighting key findings and implications.
 
-26
+## Conclusion
+The conclusion summarizes the main points of the report and provides final thoughts on the assignment.
 
-20-35 dB-Hz
+## References
+1. Reference 1
+2. Reference 2
+3. Reference 3
+```
 
-Weak, frequent drops
+### Final Steps
 
-Task 3: Navigation Data Decoding
+1. **Create an `images` directory**: Place all extracted images in this directory.
+2. **Update Image Paths**: Ensure the paths to the images in the Markdown file are correct.
+3. **Commit and Push**: Save the `README.md` file, commit it to your repository, and push the changes to GitHub.
 
-Once tracking is established, navigation messages are decoded to extract ephemeris data, which provides precise satellite position and clock corrections.
-
-Example extracted parameters for PRN 20:
-
-Satellite Position (X, Y, Z) in meters:
-
-X: [...]
-
-Y: [...]
-
-Z: [...]
-
-Satellite Clock Correction: 0.00036635 seconds
-
-Transmit Time (GPS Time): 388458.0076751 seconds
-
-Task 4: Position and Velocity Estimation
-
-User positioning is computed using Weighted Least Squares (WLS).
-
-Position Results
-
-Least Squares vs. Weighted Least Squares
-
- 
-
-Velocity Estimation
-
-Velocity Plot
-
-
-
-Comparison with Ground Truth
-
-Environment
-
-WLS Estimate
-
-Ground Truth
-
-Error
-
-Open Sky
-
-(22.3285, 114.1714)
-
-(22.3284, 114.1713)
-
-~5.5m
-
-Urban
-
-(22.32, 114.209)
-
-(22.3199, 114.2091)
-
-~14m
-
-Impact of Multipath
-
-Open Sky: Minimal error (~5m), direct line-of-sight signals dominate.
-
-Urban: Severe multipath, positioning errors exceed 10m.
-
-Task 5: Kalman Filter-Based Positioning
-
-An Extended Kalman Filter (EKF) is implemented to enhance positioning accuracy using pseudorange and Doppler measurements.
-
-EKF Results
-
-Open Sky Positioning (EKF)
-
-
-
-Urban Positioning (EKF)
-
-
-
-Comparison with WLS
-
-Kalman filtering significantly reduces errors and improves positioning stability in urban environments.
-
-Conclusion
-
-This project showcases GNSS signal processing techniques from acquisition to positioning. The key findings include:
-
-WLS provides good accuracy in open-sky environments but struggles in urban settings due to multipath effects.
-
-EKF enhances positioning stability and mitigates measurement noise.
-
-Urban interference significantly impacts GNSS tracking, highlighting the need for robust signal processing techniques.
-
-Repository Link
-
-The source code is available in this GitHub repository.
-
-How to Use
-
-Clone the repository:
-
-git clone https://github.com/SueMM00/AAE6102_Assignment1.git
-
-Run MATLAB scripts to process GNSS data:
-
-WLSPos.m (Weighted Least Squares computation)
-
-EKF.m (Extended Kalman Filter implementation)
-
-PosNavigation.m (Position estimation)
-
-Visualize results using provided MATLAB scripts.
-
-Acknowledgments
-
-Special thanks to AAE6102 instructors and OpenSky dataset contributors for providing valuable GNSS data for analysis.
-
+By following these steps, you will be able to convert your `.docx` report into a GitHub README file that includes all the necessary text and images.
 
 
 The code can be downloaded through the link below:
