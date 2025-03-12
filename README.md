@@ -23,9 +23,9 @@
 
 ## Task 1: Acquisition
 The first step in GNSS signal processing is acquisition, where Intermediate Frequency (IF) data is processed using a GNSS Software-Defined Radio (SDR). The acquisition process aims to detect satellite signals and estimate their coarse Doppler shift and code phase. The results of the acquisition provide an initial assessment of signal availability, ensuring that the satellites can be successfully tracked in subsequent steps.
+<img width="432" alt="image" src="https://github.com/user-attachments/assets/d18a5532-f637-4b28-bf1e-c8fe52295e5d" />
+<img width="432" alt="image" src="https://github.com/user-attachments/assets/d81e4611-cfff-4d57-9bfa-0b33c9a788c6" />
 
-<img width="432" alt="image" src="https://github.com/user-attachments/assets/d47218d7-7322-4dd8-8028-97699dc235f2" />
-<img width="432" alt="image" src="https://github.com/user-attachments/assets/abe7b268-b768-4472-bc00-2879ca3f48d8" />
 
 ---
 
