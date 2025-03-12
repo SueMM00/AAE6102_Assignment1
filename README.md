@@ -23,6 +23,8 @@
 
 ## Task 1: Acquisition
 The first step in GNSS signal processing is acquisition, where Intermediate Frequency (IF) data is processed using a GNSS Software-Defined Radio (SDR). The acquisition process aims to detect satellite signals and estimate their coarse Doppler shift and code phase. The results of the acquisition provide an initial assessment of signal availability, ensuring that the satellites can be successfully tracked in subsequent steps.
+<img width="432" alt="image" src="https://github.com/user-attachments/assets/d47218d7-7322-4dd8-8028-97699dc235f2" />
+<img width="432" alt="image" src="https://github.com/user-attachments/assets/abe7b268-b768-4472-bc00-2879ca3f48d8" />
 
 ---
 
@@ -34,16 +36,37 @@ The tracking phase involves adapting the tracking loop, specifically the Delay-L
 <img width="202" alt="image" src="https://github.com/user-attachments/assets/ddfbcf40-d5ff-478f-a7b3-1d6ff22b5528" />
 
 - CNo-3 and Dll-3
-- <img width="224" alt="image" src="https://github.com/user-attachments/assets/91769530-88a8-4c9d-b96e-d13992714efb" />
+<img width="224" alt="image" src="https://github.com/user-attachments/assets/91769530-88a8-4c9d-b96e-d13992714efb" />
 <img width="197" alt="image" src="https://github.com/user-attachments/assets/1652e45a-a4b4-409b-9e4f-02677abc109b" />
 
 - CNo-4 and Dll-4
+<img width="218" alt="image" src="https://github.com/user-attachments/assets/63e69a72-6ea0-4764-8a5c-05b0baa7e1b2" />
+<img width="213" alt="image" src="https://github.com/user-attachments/assets/532c669c-99aa-430b-9482-ad48e7a7a93e" />
+
 - CNo-8 and Dll-8
+<img width="212" alt="image" src="https://github.com/user-attachments/assets/b941f682-47ec-4b2e-903e-c0e36cdeadf9" />
+<img width="218" alt="image" src="https://github.com/user-attachments/assets/722e7e0c-56e4-4ae3-97fd-577a15d18a70" />
+
 - CNo-16 and Dll-16
+<img width="213" alt="image" src="https://github.com/user-attachments/assets/68883746-c818-43d2-b8f7-5a60c43c1123" />
+<img width="212" alt="image" src="https://github.com/user-attachments/assets/cfe556f9-c3d0-4c20-94a5-1505944d6b5f" />
+
 - CNo-22 and Dll-22
+<img width="217" alt="image" src="https://github.com/user-attachments/assets/1982d867-e9a7-4495-a465-b733b372bd56" />
+<img width="214" alt="image" src="https://github.com/user-attachments/assets/2cbd3d89-7ae3-4462-8f07-fcdad31f4b53" />
+
 - CNo-26 and Dll-26
+<img width="220" alt="image" src="https://github.com/user-attachments/assets/44234774-d225-4788-817f-2f34207a4ebd" />
+<img width="212" alt="image" src="https://github.com/user-attachments/assets/dd125f07-9794-43a6-8763-5ba2e63059d1" />
+
 - CNo-27 and Dll-27
+<img width="217" alt="image" src="https://github.com/user-attachments/assets/d50e00a1-f373-4094-903d-a44e6bfdefd0" />
+<img width="213" alt="image" src="https://github.com/user-attachments/assets/e705d543-a0ef-421f-8531-c203fe937e45" />
+
 - CNo-31 and Dll-31
+<img width="221" alt="image" src="https://github.com/user-attachments/assets/cde7b304-24ea-4a0d-83fa-16de1210b020" />
+<img width="198" alt="image" src="https://github.com/user-attachments/assets/aa2646fa-8409-4b65-993e-0ea6385ab4d8" />
+
 - CNo-32 and Dll-32
 
 ### 2.1 Analysis of Tracking Performance Based on C/N₀ and DLL Discriminator
@@ -134,22 +157,30 @@ Pseudorange measurements obtained from the tracking phase are utilized in a Weig
 The Weighted least square function is written in `WLSPos.m` file. The receiver’s position and velocity are calculated by the designed code in `PosNavigation.m`, and the results are shown in `navResults.mat` as WLSX, WLSY, WLSZ, Vx, Vy, Vz, and Speed respectively.
 
 **The plot of the receiver’s position calculated by least square method and weighted least square method:**
-- **Least Square:** ![Least Square Plot](./path_to_least_square_plot)
-- **Weighted Least Square:** ![Weighted Least Square Plot](./path_to_weighted_least_square_plot)
+- **Least Square:** <img width="210" alt="image" src="https://github.com/user-attachments/assets/d5f40f7b-6215-415d-85fd-0744af5066b8" />
+
+- **Weighted Least Square:** <img width="217" alt="image" src="https://github.com/user-attachments/assets/3b351f00-3cc0-4eec-9bc4-017bcd79c06b" />
+
 
 **Velocity:**
-The receiver's velocity at each epoch is calculated using the WLSX, WLSY, and WLSZ positions divided by the sampling interval:
-
-**Velocity Plot:** ![Velocity Plot](./path_to_velocity_plot)
+The receiver's velocity at each epoch is calculated using the WLSX, WLSY, and WLSZ positions divided by the sampling interval.
 
 The position results calculated using the weighted least square method are converted to geodetic coordinates to compare with the ground truth:
 
 **Result comparison:**
 - **Opensky**
-  - **WLS results in Open Sky:** ![WLS Open Sky](./path_to_wls_open_sky)
+<img width="432" alt="image" src="https://github.com/user-attachments/assets/6576a8f3-798b-4278-afe6-2226e4b4b04c" />
+
+  - **WLS results in Open Sky:** <img width="253" alt="image" src="https://github.com/user-attachments/assets/aeeda54f-88e8-488a-878c-5c80f0573e27" />
+<img width="253" alt="image" src="https://github.com/user-attachments/assets/01efeb96-37c4-4425-8758-08f4d7c5beed" />
+
   - **Ground Truth in Open Sky:** (22.328444770087565, 114.1713630049711)
 - **Urban**
-  - **WLS results in Urban:** ![WLS Urban](./path_to_wls_urban)
+<img width="432" alt="image" src="https://github.com/user-attachments/assets/3c6c1053-0f30-4fb5-8216-e42ecabc3167" />
+
+  - **WLS results in Urban:** <img width="346" alt="image" src="https://github.com/user-attachments/assets/3e9a5414-3063-42d4-8919-549df0c36653" />
+<img width="351" alt="image" src="https://github.com/user-attachments/assets/928f7dfd-756d-4270-bbda-57f847da97e4" />
+
   - **Ground truth in Urban:** (22.3198722, 114.209101777778)
 
 ### Discussion on the impact of multipath effects on the WLS solution
@@ -202,8 +233,12 @@ To enhance positioning accuracy, an Extended Kalman Filter (EKF) is developed us
 
 The EKF algorithm is written in the `EKF.m` file. The position processing is written in the `postnavigation.m` file.
 
-**EKF results in Opensky:** ![EKF Opensky](./path_to_ekf_opensky)
-**EKF results in Urban:** ![EKF Urban](./path_to_ekf_urban)
+**EKF results in Opensky:** <img width="327" alt="image" src="https://github.com/user-attachments/assets/56a2d4f5-ddaf-45e5-9cf7-17d459a1f7a5" />
+<img width="318" alt="image" src="https://github.com/user-attachments/assets/55530f7f-2459-495c-ad41-8dbb26fe696f" />
+
+**EKF results in Urban:** <img width="321" alt="image" src="https://github.com/user-attachments/assets/c9132b6b-7295-4b36-bb1d-2b9c08d8780b" />
+<img width="325" alt="image" src="https://github.com/user-attachments/assets/e1eb9e6b-21a6-40b4-be3a-31955e2a2945" />
+
 
 ---
 
