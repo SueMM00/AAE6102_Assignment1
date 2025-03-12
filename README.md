@@ -23,6 +23,7 @@
 
 ## Task 1: Acquisition
 The first step in GNSS signal processing is acquisition, where Intermediate Frequency (IF) data is processed using a GNSS Software-Defined Radio (SDR). The acquisition process aims to detect satellite signals and estimate their coarse Doppler shift and code phase. The results of the acquisition provide an initial assessment of signal availability, ensuring that the satellites can be successfully tracked in subsequent steps.
+
 <img width="432" alt="image" src="https://github.com/user-attachments/assets/d47218d7-7322-4dd8-8028-97699dc235f2" />
 <img width="432" alt="image" src="https://github.com/user-attachments/assets/abe7b268-b768-4472-bc00-2879ca3f48d8" />
 
@@ -157,9 +158,11 @@ Pseudorange measurements obtained from the tracking phase are utilized in a Weig
 The Weighted least square function is written in `WLSPos.m` file. The receiver’s position and velocity are calculated by the designed code in `PosNavigation.m`, and the results are shown in `navResults.mat` as WLSX, WLSY, WLSZ, Vx, Vy, Vz, and Speed respectively.
 
 **The plot of the receiver’s position calculated by least square method and weighted least square method:**
-- **Least Square:** <img width="210" alt="image" src="https://github.com/user-attachments/assets/d5f40f7b-6215-415d-85fd-0744af5066b8" />
+- **Least Square:**
+<img width="210" alt="image" src="https://github.com/user-attachments/assets/d5f40f7b-6215-415d-85fd-0744af5066b8" />
 
-- **Weighted Least Square:** <img width="217" alt="image" src="https://github.com/user-attachments/assets/3b351f00-3cc0-4eec-9bc4-017bcd79c06b" />
+- **Weighted Least Square:**
+<img width="217" alt="image" src="https://github.com/user-attachments/assets/3b351f00-3cc0-4eec-9bc4-017bcd79c06b" />
 
 
 **Velocity:**
@@ -171,14 +174,16 @@ The position results calculated using the weighted least square method are conve
 - **Opensky**
 <img width="432" alt="image" src="https://github.com/user-attachments/assets/6576a8f3-798b-4278-afe6-2226e4b4b04c" />
 
-  - **WLS results in Open Sky:** <img width="253" alt="image" src="https://github.com/user-attachments/assets/aeeda54f-88e8-488a-878c-5c80f0573e27" />
+  - **WLS results in Open Sky:**
+<img width="253" alt="image" src="https://github.com/user-attachments/assets/aeeda54f-88e8-488a-878c-5c80f0573e27" />
 <img width="253" alt="image" src="https://github.com/user-attachments/assets/01efeb96-37c4-4425-8758-08f4d7c5beed" />
 
   - **Ground Truth in Open Sky:** (22.328444770087565, 114.1713630049711)
 - **Urban**
 <img width="432" alt="image" src="https://github.com/user-attachments/assets/3c6c1053-0f30-4fb5-8216-e42ecabc3167" />
 
-  - **WLS results in Urban:** <img width="346" alt="image" src="https://github.com/user-attachments/assets/3e9a5414-3063-42d4-8919-549df0c36653" />
+  - **WLS results in Urban:**
+<img width="346" alt="image" src="https://github.com/user-attachments/assets/3e9a5414-3063-42d4-8919-549df0c36653" />
 <img width="351" alt="image" src="https://github.com/user-attachments/assets/928f7dfd-756d-4270-bbda-57f847da97e4" />
 
   - **Ground truth in Urban:** (22.3198722, 114.209101777778)
@@ -233,10 +238,12 @@ To enhance positioning accuracy, an Extended Kalman Filter (EKF) is developed us
 
 The EKF algorithm is written in the `EKF.m` file. The position processing is written in the `postnavigation.m` file.
 
-**EKF results in Opensky:** <img width="327" alt="image" src="https://github.com/user-attachments/assets/56a2d4f5-ddaf-45e5-9cf7-17d459a1f7a5" />
+**EKF results in Opensky:** 
+<img width="327" alt="image" src="https://github.com/user-attachments/assets/56a2d4f5-ddaf-45e5-9cf7-17d459a1f7a5" />
 <img width="318" alt="image" src="https://github.com/user-attachments/assets/55530f7f-2459-495c-ad41-8dbb26fe696f" />
 
-**EKF results in Urban:** <img width="321" alt="image" src="https://github.com/user-attachments/assets/c9132b6b-7295-4b36-bb1d-2b9c08d8780b" />
+**EKF results in Urban:** 
+<img width="321" alt="image" src="https://github.com/user-attachments/assets/c9132b6b-7295-4b36-bb1d-2b9c08d8780b" />
 <img width="325" alt="image" src="https://github.com/user-attachments/assets/e1eb9e6b-21a6-40b4-be3a-31955e2a2945" />
 
 
